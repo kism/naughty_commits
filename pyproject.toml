@@ -1,0 +1,51 @@
+[project]
+name = "naughty-commits"
+version = "0.1.0"
+description = "A tool to see commits during and not during work hours."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "pygit2>=1.15.1",
+]
+
+[dependency-groups]
+lint = ["ruff>=0.12.7"]
+
+
+[tool.ruff]
+cache-dir = "~/.cache/ruff"
+target-version = "py311"
+line-length = 120
+
+[tool.ruff.lint]
+extend-fixable = ["B", "I001"] # KG I think this means something...
+extend-unsafe-fixes = [
+    "F401",
+] # KG I don't like that this is fixed automatically (this doesn't work?)
+select = ["ALL"] # KG Include absolutely all of Ruff's rules.
+ignore = [
+    # Modules
+    "DJ",  # KG Django not required
+    "DTZ", # KG no need to specify timezone for time objects
+
+    # Specific rules
+    # "ANN101", # KG Why define self type for object functions...
+    "TD002",  # KG Verbose TODO, only I work on this project
+    "TD003",  # KG Verbose TODO, only I work on this project
+    "ISC001", # KG conflict in the formatter
+    "COM812", # KG conflict in the formatter
+    "D203",   # KG conflict in the formatter
+    "D213",   # KG conflict in the formatter
+    "T201",   # KG print is fine at this scale
+]
+
+
+[build-system]
+requires = ["uv_build>=0.8.4,<0.9.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-root = ""
+
+[project.scripts]
+naughty-commits = "naughty_commits:__main__.main"
