@@ -2,9 +2,9 @@
 
 See how many of your commits land outside work hours.
 
-[![Check](https://github.com/kism/naughtycommits/actions/workflows/check.yml/badge.svg)](https://github.com/kism/naughtycommits/actions/workflows/check.yml)
-[![Type Check](https://github.com/kism/naughtycommits/actions/workflows/check_types.yml/badge.svg)](https://github.com/kism/naughtycommits/actions/workflows/check_types.yml)
-[![Test](https://github.com/kism/naughtycommits/actions/workflows/test.yml/badge.svg)](https://github.com/kism/naughtycommits/actions/workflows/test.yml)
+[![Lint](https://github.com/kism/naughtycommits/actions/workflows/check.yml/badge.svg?branch=main)](https://github.com/kism/naughtycommits/actions/workflows/check.yml)
+[![Type Check](https://github.com/kism/naughtycommits/actions/workflows/check_types.yml/badge.svg?branch=main)](https://github.com/kism/naughtycommits/actions/workflows/check_types.yml)
+[![Test](https://github.com/kism/naughtycommits/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/kism/naughtycommits/actions/workflows/test.yml)
 
 ## Install
 
